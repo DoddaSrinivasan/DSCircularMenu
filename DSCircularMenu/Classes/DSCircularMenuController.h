@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DSCircularLayout.h"
+@import DSCircularCollectionView;
 
 @interface DSCircularMenuController : UIViewController
 
