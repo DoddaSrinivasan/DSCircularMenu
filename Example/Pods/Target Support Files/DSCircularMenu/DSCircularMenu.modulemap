@@ -1,0 +1,6 @@
+framework module DSCircularMenu {
+  umbrella header "DSCircularMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

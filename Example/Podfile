@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'DSCircularMenu_Example' do
+  pod 'DSCircularMenu', :path => '../'
+
+end

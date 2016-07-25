@@ -1,0 +1,16 @@
+PODS:
+  - DSCircularMenu (0.1.0)
+
+DEPENDENCIES:
+  - DSCircularMenu (from `../`)
+
+EXTERNAL SOURCES:
+  DSCircularMenu:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DSCircularMenu: 41f75b0be0ccda885a5cc6a26aa2869d3ac8ff2d
+
+PODFILE CHECKSUM: 7369686c7a02bc029267eee22b90cf30fd9b1b1c
+
+COCOAPODS: 1.0.1
