@@ -1,9 +1,8 @@
 {
   "name": "DSCircularMenu",
   "version": "0.1.0",
-  "summary": "A short description of DSCircularMenu.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DSCircularMenu",
+  "summary": "A Container View Controller to present circular wheel menu based navigation",
+  "homepage": "https://github.com/DoddaSrinivasan/DSCircularMenu",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +11,16 @@
     "Dodda Srinivasan": "srinivasan.munna@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DSCircularMenu.git",
+    "git": "https://github.com/DoddaSrinivasan/DSCircularMenu.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "DSCircularMenu/Classes/**/*"
+  "source_files": "DSCircularMenu/Classes/**/*",
+  "dependencies": {
+    "DSCircularCollectionView": [
+
+    ]
+  }
 }

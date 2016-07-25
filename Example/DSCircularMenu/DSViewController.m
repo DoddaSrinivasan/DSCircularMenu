@@ -7,6 +7,7 @@
 //
 
 #import "DSViewController.h"
+#import "DSCircularMenuController.h"
 
 @interface DSViewController ()
 

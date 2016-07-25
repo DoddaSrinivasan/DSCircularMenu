@@ -1,6 +1,0 @@
-framework module Pods_DSCircularMenu_Tests {
-  umbrella header "Pods-DSCircularMenu_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

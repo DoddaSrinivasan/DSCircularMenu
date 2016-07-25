@@ -1,5 +1,7 @@
 PODS:
-  - DSCircularMenu (0.1.0)
+  - DSCircularCollectionView (1.0.1)
+  - DSCircularMenu (0.1.0):
+    - DSCircularCollectionView
 
 DEPENDENCIES:
   - DSCircularMenu (from `../`)
@@ -9,8 +11,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DSCircularMenu: 41f75b0be0ccda885a5cc6a26aa2869d3ac8ff2d
+  DSCircularCollectionView: 755a501c56119b5ab893e91e22dfe5f23431ab4c
+  DSCircularMenu: baaade57de7b3f3c1b990f6d5348d1f145380eee
 
-PODFILE CHECKSUM: 7369686c7a02bc029267eee22b90cf30fd9b1b1c
+PODFILE CHECKSUM: f0148d6dbcf574c3e0b7a9d870a7989f9fe4a857
 
 COCOAPODS: 1.0.1

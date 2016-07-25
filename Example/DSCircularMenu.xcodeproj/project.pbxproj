@@ -21,7 +21,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		82753B140193C7712C1AF696 /* Pods_DSCircularMenu_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6CE833DF92AE8250E078F /* Pods_DSCircularMenu_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		0161F360DA4ACF0AF45DA174 /* Pods_DSCircularMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSCircularMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D06373EFCC5FA275B299659 /* Pods-DSCircularMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSCircularMenu_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSCircularMenu_Example/Pods-DSCircularMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		41EF90639F7317190648B031 /* Pods-DSCircularMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSCircularMenu_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSCircularMenu_Tests/Pods-DSCircularMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4850CE27804B825C46EEAE67 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		51A440E0AA2181E5E8E30F24 /* Pods-DSCircularMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSCircularMenu_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSCircularMenu_Example/Pods-DSCircularMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DSCircularMenu_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSCircularMenu_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +60,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6FC92F216667447920BFF978 /* DSCircularMenu.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DSCircularMenu.podspec; path = ../DSCircularMenu.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A3E63889B0BB9B1C0C91DE8A /* Pods-DSCircularMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSCircularMenu_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSCircularMenu_Tests/Pods-DSCircularMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AD659463A5688428C781A297 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C0B6CE833DF92AE8250E078F /* Pods_DSCircularMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSCircularMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,7 +83,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				82753B140193C7712C1AF696 /* Pods_DSCircularMenu_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +94,6 @@
 			children = (
 				3D06373EFCC5FA275B299659 /* Pods-DSCircularMenu_Example.debug.xcconfig */,
 				51A440E0AA2181E5E8E30F24 /* Pods-DSCircularMenu_Example.release.xcconfig */,
-				41EF90639F7317190648B031 /* Pods-DSCircularMenu_Tests.debug.xcconfig */,
-				A3E63889B0BB9B1C0C91DE8A /* Pods-DSCircularMenu_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -541,7 +535,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41EF90639F7317190648B031 /* Pods-DSCircularMenu_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -565,7 +558,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3E63889B0BB9B1C0C91DE8A /* Pods-DSCircularMenu_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

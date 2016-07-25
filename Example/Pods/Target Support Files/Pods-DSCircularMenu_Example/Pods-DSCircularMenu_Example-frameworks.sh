@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/DSCircularCollectionView/DSCircularCollectionView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DSCircularMenu/DSCircularMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/DSCircularCollectionView/DSCircularCollectionView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DSCircularMenu/DSCircularMenu.framework"
 fi
