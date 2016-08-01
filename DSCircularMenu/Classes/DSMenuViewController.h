@@ -13,6 +13,8 @@
 
 @interface DSMenuViewController : UICollectionViewController
 
+@property (assign, nonatomic) BOOL isAnimating;
+
 @property (strong, nonatomic) DSCircularLayout *circularLayout;
 
 @property (weak, nonatomic) id<DSMenuViewControllerDataSource> dataSource;

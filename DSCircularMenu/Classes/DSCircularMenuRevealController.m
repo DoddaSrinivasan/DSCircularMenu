@@ -10,6 +10,7 @@
 
 @interface DSCircularMenuRevealController (){
     DSMenuViewController *_menuViewController;
+    int menuOverlayExpandedWidth;
 }
 
 @end
@@ -21,26 +22,45 @@
     _menuViewController = [[DSMenuViewController alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     _menuViewController.dataSource = self;
     _menuViewController.view.backgroundColor = [UIColor clearColor];
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    menuOverlayExpandedWidth = sqrt(pow(screenSize.height, 2) + pow(screenSize.width/2, 2));
     [self addChildViewController:_menuViewController toView:_menuView];
 }
 
 -(void)loadView{
     [super loadView];
+    
     CGRect bounds = self.view.bounds;
+    
+    CGRect menuButtonBounds = self.view.bounds;
+    menuButtonBounds.size.width = 60;
+    menuButtonBounds.size.height = 60;
     
     _frontView = [[UIView alloc] initWithFrame:bounds];
     _frontView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     _frontView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_frontView];
     
+    
+    _menuOverLayContainer = [[UIView alloc] initWithFrame:bounds];
+    _menuOverLayContainer.backgroundColor = [UIColor clearColor];
+    _menuOverLayContainer.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:_menuOverLayContainer];
+    [self addConstraintsToChildView:_menuOverLayContainer forView:self.view];
+    
+    _menuOverLayView = [[UIView alloc] initWithFrame:menuButtonBounds];
+    _menuOverLayView.layer.cornerRadius = 30;
+    _menuOverLayView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    _menuOverLayView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [_menuOverLayContainer addSubview:_menuOverLayView];
+    
     _menuView = [[UIView alloc] initWithFrame:bounds];
     _menuView.backgroundColor = [UIColor clearColor];
     _menuView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_menuView];
     
-    bounds.size.width = 60;
-    bounds.size.height = 60;
-    _menuButtonView = [[UIView alloc] initWithFrame:bounds];
+    _menuButtonView = [[UIView alloc] initWithFrame:menuButtonBounds];
     _menuButtonView.layer.cornerRadius = 30;
     _menuButtonView.backgroundColor = [UIColor redColor];
     _menuButtonView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
@@ -50,17 +70,15 @@
     [_menuButtonView addGestureRecognizer:menuTapRecognizer];
     
     _menuView.hidden = YES;
+    _menuOverLayContainer.hidden = YES;
 }
 
 - (void)handleMenuTap:(UITapGestureRecognizer *)recognizer {
     if(_menuView.hidden){
-        _menuView.hidden = NO;
-        [_menuViewController showMenu];
+        [self showMenu];
     }else{
-        [_menuViewController hideMenu];
-        _menuView.hidden = YES;
+        [self hideMenu];
     }
-    
 }
 
 -(void)addChildViewController:(UIViewController *)childVc toView:(UIView *)view{
@@ -91,11 +109,34 @@
 #pragma mark - menu methods
 
 -(void)showMenu{
-    [_menuViewController showMenu];
+    if(!_menuViewController.isAnimating){
+        _menuView.hidden = NO;
+        _menuOverLayContainer.hidden = NO;
+        [UIView animateWithDuration:.3
+                         animations:^
+         {
+             self.menuOverLayView.transform = CGAffineTransformMakeScale(2*menuOverlayExpandedWidth/60, 2*menuOverlayExpandedWidth/60);
+             [_menuOverLayContainer layoutIfNeeded];
+         } completion:^(BOOL finished) {
+             
+         }];
+        [_menuViewController showMenu];
+    }
 }
 
 -(void)hideMenu{
-    [_menuViewController hideMenu];
+    if(!_menuViewController.isAnimating){
+        [UIView animateWithDuration:.3
+                         animations:^
+         {
+             self.menuOverLayView.transform = CGAffineTransformMakeScale(1,1);
+             [_menuOverLayContainer layoutIfNeeded];
+         } completion:^(BOOL finished) {
+             _menuView.hidden = YES;
+             _menuOverLayContainer.hidden = YES;
+         }];
+        [_menuViewController hideMenu];
+    }
 }
 
 #pragma mark - orientation and preferred status bar
@@ -137,6 +178,7 @@
     menuButtonFrame.origin.x = centre.x - 30;
     menuButtonFrame.origin.y = centre.y - 30;
     _menuButtonView.frame = menuButtonFrame;
+    _menuOverLayView.frame = menuButtonFrame;
     
     [_menuViewController.circularLayout setStartAngle:M_PI endAngle:0];
     _menuViewController.circularLayout.mirrorX = NO;

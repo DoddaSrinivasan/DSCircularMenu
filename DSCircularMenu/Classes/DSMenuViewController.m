@@ -10,6 +10,7 @@
 
 @interface DSMenuViewController (){
     NSInteger _menuItemsCount;
+    BOOL _isAnimating;
 }
 
 @end
@@ -21,6 +22,8 @@
     _menuItemsCount = 0;
     _circularLayout = [[DSCircularLayout alloc] init];
     self.collectionView.backgroundColor = [UIColor clearColor];
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -42,6 +45,7 @@
 }
 
 -(void)showMenu{
+    _isAnimating = YES;
     [self.collectionView performBatchUpdates:^{
         CGFloat originalAnimationDuration = [CATransaction animationDuration];
         CGFloat newAnimationDuration = 0.3;
@@ -52,11 +56,12 @@
         _menuItemsCount = [_dataSource noOfMenuItems];
         [self.collectionView layoutIfNeeded];
     } completion:^(BOOL finished) {
-        
+        _isAnimating = NO;
     }];
 }
 
 -(void)hideMenu{
+    _isAnimating = YES;
     [self.collectionView performBatchUpdates:^{
         CGFloat originalAnimationDuration = [CATransaction animationDuration];
         CGFloat newAnimationDuration = 0.3;
@@ -67,7 +72,7 @@
         _menuItemsCount = 0;
         [self.collectionView layoutIfNeeded];
     } completion:^(BOOL finished) {
-        
+        _isAnimating = NO;
     }];
     
 }

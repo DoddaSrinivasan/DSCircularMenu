@@ -23,6 +23,8 @@
 
 @property (strong, nonatomic, nonnull) UIView *frontView;
 @property (strong, nonatomic, nonnull) UIView *menuView;
+@property (strong, nonatomic, nonnull) UIView *menuOverLayContainer;
+@property (strong, nonatomic, nonnull) UIView *menuOverLayView;
 @property (strong, nonatomic, nonnull) UIView *menuButtonView;
 
 
