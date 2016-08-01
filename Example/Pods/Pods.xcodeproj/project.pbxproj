@@ -7,36 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003A7F093078DBC1685C2CFE826BD209 /* DSCircularMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA87213F5857C9D06AB8975090D11C5D /* DSCircularMenu-dummy.m */; };
-		04ABF03D0EB812201C74916B296BAB14 /* DSCircularMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433F304DE8E50E507D0461D85CD0030A /* DSCircularMenuController.m */; };
 		092CB34F9B181B3BD4719E249747A095 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C19552716A6BEBA0B10318B570B34B1 /* Foundation.framework */; };
-		0B22F422B534D797ECC1329E2F189651 /* DSCircularCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0E68BCC40AC73F3FD433138DC8628D /* DSCircularCollectionView.framework */; };
 		121041F3DA5B224C0A7445091D9CF225 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C19552716A6BEBA0B10318B570B34B1 /* Foundation.framework */; };
-		2F3DFEA46EE9ECEE56AE9E3D11321513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C19552716A6BEBA0B10318B570B34B1 /* Foundation.framework */; };
+		1D8971A6012C3054222F8E37CE334B14 /* DSCircularMenuRevealController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DEB26D81A101A8B5B1804446CB06F63 /* DSCircularMenuRevealController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		249A3051962A21915AC986480FE8AA90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C19552716A6BEBA0B10318B570B34B1 /* Foundation.framework */; };
+		2511B48D338BC74E54982B58163BBAB0 /* DSMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E0774400A27CABDED0C8C6715D573B70 /* DSMenuViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EF98E7B4489F1FF979D1B4107634CBE /* DSCircularCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0E68BCC40AC73F3FD433138DC8628D /* DSCircularCollectionView.framework */; };
 		498270046B4C351BF140165BE653A601 /* Pods-DSCircularMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A90BB419054D287FB1832249BE21BE /* Pods-DSCircularMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59B5D50C4E1CCDAD103A270375DC14D0 /* DSCircularLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5301818326361BFC8818DD2E1DD6A /* DSCircularLayout.m */; };
 		767F318E57FCE61677643A636FEFAE1F /* DSCircularCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63189B6AC7EBEB8FE978D3E10FD35ED2 /* DSCircularCollectionView-dummy.m */; };
-		B06D4A6CBA743B9911A93A25ED65160C /* DSCircularMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 665616DD38817C3E87F2129D5ECE3F5F /* DSCircularMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0EC5187B67A74072EE7F19377B10B45 /* DSCircularMenuController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D69AA575483DE625C468261BF14C90 /* DSCircularMenuController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B62433711D704E6ABB10A2426723458B /* DSCircularMenuRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1DCD687FDEE5F262474C176BA549CB /* DSCircularMenuRevealController.m */; };
+		BFCD0C3587B996A1A77EAFE029767FA0 /* DSCircularMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 665616DD38817C3E87F2129D5ECE3F5F /* DSCircularMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D666539087F741E7B662E2FC1CE37 /* DSMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B9CA98EF39F2C4AA85A2DBA9CA552 /* DSMenuViewController.m */; };
 		D1F24F43A346F5A89969EB09DAB499A3 /* DSCircularCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B29E9F8A4C4852D26C0BC24E355DFA2 /* DSCircularCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D98DF1FBBD824493BE7D32A357619E44 /* Pods-DSCircularMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFA35C49D62E76CBEC093D285217CE /* Pods-DSCircularMenu_Example-dummy.m */; };
 		E1D328B050B134EDCC7CCD602B0E890F /* DSCircularLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C85B7DFD38E98BCF168329366E152582 /* DSCircularLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96522D56EA327A98A4B10732817DF14 /* DSCircularMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA87213F5857C9D06AB8975090D11C5D /* DSCircularMenu-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0EF278D535D19D7F628ADCF3F87213EF /* PBXContainerItemProxy */ = {
+		2AD65A3A083F7B0776332C66BA64DAF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52132C358291D726B9450946662ACB4A;
+			remoteInfo = DSCircularMenu;
+		};
+		EB42405E46C0CA1583A77301AAC62C7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 447891437F61A1C9F829820B7C0AE835;
 			remoteInfo = DSCircularCollectionView;
-		};
-		2AD65A3A083F7B0776332C66BA64DAF1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 48A9DFF8C60D271A2007A5A7B329B0B5;
-			remoteInfo = DSCircularMenu;
 		};
 		F4A7435B55578FDD85FDD77BF48D5299 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -50,20 +52,21 @@
 /* Begin PBXFileReference section */
 		02CDB5FEF1AEEE18950853AE16C79DB8 /* Pods-DSCircularMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DSCircularMenu_Example.modulemap"; sourceTree = "<group>"; };
 		09D5607ABB9D43A667A36ABCC30A48C5 /* Pods-DSCircularMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DSCircularMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0C1DCD687FDEE5F262474C176BA549CB /* DSCircularMenuRevealController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DSCircularMenuRevealController.m; sourceTree = "<group>"; };
 		167EB3E3A611C12502FEE49B1794CB01 /* Pods-DSCircularMenu_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DSCircularMenu_Example-frameworks.sh"; sourceTree = "<group>"; };
+		1DEB26D81A101A8B5B1804446CB06F63 /* DSCircularMenuRevealController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DSCircularMenuRevealController.h; sourceTree = "<group>"; };
 		22E946851EAF53D4DB673B6149EE780F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B334418A9005A63C610E2BC590AB5C /* Pods_DSCircularMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSCircularMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		423433EFC04BBF93FA546CD12AC8C8CF /* Pods-DSCircularMenu_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DSCircularMenu_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		433F304DE8E50E507D0461D85CD0030A /* DSCircularMenuController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DSCircularMenuController.m; sourceTree = "<group>"; };
 		4C19552716A6BEBA0B10318B570B34B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		53D9A5AF29F02632FDAC177B09BB0E98 /* Pods-DSCircularMenu_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DSCircularMenu_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		54840104A234F6E7E42CA0C543413FB6 /* Pods-DSCircularMenu_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DSCircularMenu_Example-resources.sh"; sourceTree = "<group>"; };
+		549B9CA98EF39F2C4AA85A2DBA9CA552 /* DSMenuViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DSMenuViewController.m; sourceTree = "<group>"; };
 		5B0F72AD92229343AC65CD54A56DB7D2 /* DSCircularMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DSCircularMenu.modulemap; sourceTree = "<group>"; };
 		62BFA35C49D62E76CBEC093D285217CE /* Pods-DSCircularMenu_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DSCircularMenu_Example-dummy.m"; sourceTree = "<group>"; };
 		63189B6AC7EBEB8FE978D3E10FD35ED2 /* DSCircularCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DSCircularCollectionView-dummy.m"; sourceTree = "<group>"; };
 		665616DD38817C3E87F2129D5ECE3F5F /* DSCircularMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DSCircularMenu-umbrella.h"; sourceTree = "<group>"; };
 		6B29E9F8A4C4852D26C0BC24E355DFA2 /* DSCircularCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DSCircularCollectionView-umbrella.h"; sourceTree = "<group>"; };
-		75D69AA575483DE625C468261BF14C90 /* DSCircularMenuController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DSCircularMenuController.h; sourceTree = "<group>"; };
 		7C961362CE4EECB490759BC8D06A9A02 /* Pods-DSCircularMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DSCircularMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7CA0B866F50AAA94A29D28F63F2DDBB1 /* DSCircularCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DSCircularCollectionView.xcconfig; sourceTree = "<group>"; };
 		82ECAF08077B36271EBD8030F77D522B /* DSCircularCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSCircularCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +81,7 @@
 		C85B7DFD38E98BCF168329366E152582 /* DSCircularLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSCircularLayout.h; path = DSCircularCollectionView/Classes/DSCircularLayout.h; sourceTree = "<group>"; };
 		C9E85DB0C11C20FADB3E7FFE226D0C78 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC0CD751F23398AF849B693823CD788A /* DSCircularCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DSCircularCollectionView.modulemap; sourceTree = "<group>"; };
+		E0774400A27CABDED0C8C6715D573B70 /* DSMenuViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DSMenuViewController.h; sourceTree = "<group>"; };
 		EE8E53A97ADE70583CE4FE9EEE8E2BD1 /* DSCircularCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DSCircularCollectionView-prefix.pch"; sourceTree = "<group>"; };
 		FF5479AEAA2F4E6BBC9E723C88A21973 /* DSCircularMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DSCircularMenu.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,12 +103,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5435FBB7077F764D27EBF281D28FFFB1 /* Frameworks */ = {
+		0CB2D829FB8C11C5A9691DE94A52679F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B22F422B534D797ECC1329E2F189651 /* DSCircularCollectionView.framework in Frameworks */,
-				2F3DFEA46EE9ECEE56AE9E3D11321513 /* Foundation.framework in Frameworks */,
+				3EF98E7B4489F1FF979D1B4107634CBE /* DSCircularCollectionView.framework in Frameworks */,
+				249A3051962A21915AC986480FE8AA90 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +135,17 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DSCircularCollectionView";
+			sourceTree = "<group>";
+		};
+		519AFFF53B941AAB25BA352C039EC457 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB26D81A101A8B5B1804446CB06F63 /* DSCircularMenuRevealController.h */,
+				0C1DCD687FDEE5F262474C176BA549CB /* DSCircularMenuRevealController.m */,
+				E0774400A27CABDED0C8C6715D573B70 /* DSMenuViewController.h */,
+				549B9CA98EF39F2C4AA85A2DBA9CA552 /* DSMenuViewController.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		5A9153EA4735F172A7959B97C2CF7E36 /* Pods-DSCircularMenu_Example */ = {
@@ -182,13 +197,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		A948EE09A188EA11402F10529E333204 /* Classes */ = {
+		82A849B3516DABC1470A39E59422BB91 /* DSCircularMenu */ = {
 			isa = PBXGroup;
 			children = (
-				75D69AA575483DE625C468261BF14C90 /* DSCircularMenuController.h */,
-				433F304DE8E50E507D0461D85CD0030A /* DSCircularMenuController.m */,
+				519AFFF53B941AAB25BA352C039EC457 /* Classes */,
 			);
-			path = Classes;
+			path = DSCircularMenu;
 			sourceTree = "<group>";
 		};
 		AADCDEEBA3EA05CE18C9D0EB166117D1 /* iOS */ = {
@@ -216,7 +230,7 @@
 		D9947E9B1288355BDD6FF16B17AF76F3 /* DSCircularMenu */ = {
 			isa = PBXGroup;
 			children = (
-				EF2869EE39510FB711755E29F78F5EBA /* DSCircularMenu */,
+				82A849B3516DABC1470A39E59422BB91 /* DSCircularMenu */,
 				AAF6DE115103CADE57B6EB6BCE44A25A /* Support Files */,
 			);
 			name = DSCircularMenu;
@@ -239,14 +253,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		EF2869EE39510FB711755E29F78F5EBA /* DSCircularMenu */ = {
-			isa = PBXGroup;
-			children = (
-				A948EE09A188EA11402F10529E333204 /* Classes */,
-			);
-			path = DSCircularMenu;
-			sourceTree = "<group>";
-		};
 		FAA4C7D9FB6EEE9F328D03E693E964A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,12 +266,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2737D6C76B6748BA5B63653C2B108B5B /* Headers */ = {
+		E3E786FFE7AC53465CC08D65928C4C11 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B06D4A6CBA743B9911A93A25ED65160C /* DSCircularMenu-umbrella.h in Headers */,
-				D0EC5187B67A74072EE7F19377B10B45 /* DSCircularMenuController.h in Headers */,
+				BFCD0C3587B996A1A77EAFE029767FA0 /* DSCircularMenu-umbrella.h in Headers */,
+				1D8971A6012C3054222F8E37CE334B14 /* DSCircularMenuRevealController.h in Headers */,
+				2511B48D338BC74E54982B58163BBAB0 /* DSMenuViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,18 +313,18 @@
 			productReference = 82ECAF08077B36271EBD8030F77D522B /* DSCircularCollectionView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		48A9DFF8C60D271A2007A5A7B329B0B5 /* DSCircularMenu */ = {
+		52132C358291D726B9450946662ACB4A /* DSCircularMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF86DE0C4C9B5EE192BF487B1AB1C4CB /* Build configuration list for PBXNativeTarget "DSCircularMenu" */;
+			buildConfigurationList = D688C261C1CE79ACE6A5691774709214 /* Build configuration list for PBXNativeTarget "DSCircularMenu" */;
 			buildPhases = (
-				3C33F02761508DA508D5694CD3595C89 /* Sources */,
-				5435FBB7077F764D27EBF281D28FFFB1 /* Frameworks */,
-				2737D6C76B6748BA5B63653C2B108B5B /* Headers */,
+				3E04F954A9CCA4A65A8D486ADD785438 /* Sources */,
+				0CB2D829FB8C11C5A9691DE94A52679F /* Frameworks */,
+				E3E786FFE7AC53465CC08D65928C4C11 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				94E87666BFC78E0597466C2C0979E326 /* PBXTargetDependency */,
+				F151025FF588A07382CA0E8D4DC8CD63 /* PBXTargetDependency */,
 			);
 			name = DSCircularMenu;
 			productName = DSCircularMenu;
@@ -365,7 +372,7 @@
 			projectRoot = "";
 			targets = (
 				447891437F61A1C9F829820B7C0AE835 /* DSCircularCollectionView */,
-				48A9DFF8C60D271A2007A5A7B329B0B5 /* DSCircularMenu */,
+				52132C358291D726B9450946662ACB4A /* DSCircularMenu */,
 				AC39990330662F67133A8DFBD1E39ABD /* Pods-DSCircularMenu_Example */,
 			);
 		};
@@ -381,12 +388,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C33F02761508DA508D5694CD3595C89 /* Sources */ = {
+		3E04F954A9CCA4A65A8D486ADD785438 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				003A7F093078DBC1685C2CFE826BD209 /* DSCircularMenu-dummy.m in Sources */,
-				04ABF03D0EB812201C74916B296BAB14 /* DSCircularMenuController.m in Sources */,
+				E96522D56EA327A98A4B10732817DF14 /* DSCircularMenu-dummy.m in Sources */,
+				B62433711D704E6ABB10A2426723458B /* DSCircularMenuRevealController.m in Sources */,
+				CA5D666539087F741E7B662E2FC1CE37 /* DSMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,17 +415,17 @@
 			target = 447891437F61A1C9F829820B7C0AE835 /* DSCircularCollectionView */;
 			targetProxy = F4A7435B55578FDD85FDD77BF48D5299 /* PBXContainerItemProxy */;
 		};
-		94E87666BFC78E0597466C2C0979E326 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DSCircularCollectionView;
-			target = 447891437F61A1C9F829820B7C0AE835 /* DSCircularCollectionView */;
-			targetProxy = 0EF278D535D19D7F628ADCF3F87213EF /* PBXContainerItemProxy */;
-		};
 		9D14E6CBBAD31A8772239D9A3499968F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DSCircularMenu;
-			target = 48A9DFF8C60D271A2007A5A7B329B0B5 /* DSCircularMenu */;
+			target = 52132C358291D726B9450946662ACB4A /* DSCircularMenu */;
 			targetProxy = 2AD65A3A083F7B0776332C66BA64DAF1 /* PBXContainerItemProxy */;
+		};
+		F151025FF588A07382CA0E8D4DC8CD63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DSCircularCollectionView;
+			target = 447891437F61A1C9F829820B7C0AE835 /* DSCircularCollectionView */;
+			targetProxy = EB42405E46C0CA1583A77301AAC62C7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,7 +501,7 @@
 			};
 			name = Release;
 		};
-		13A24E64B830D340AEE1E5EEC279B107 /* Release */ = {
+		223775AA7D1B681BDAC40BF60A3B0FEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF5479AEAA2F4E6BBC9E723C88A21973 /* DSCircularMenu.xcconfig */;
 			buildSettings = {
@@ -551,35 +559,6 @@
 			};
 			name = Debug;
 		};
-		7F5DF977175038ED82EA36DD58BE0E39 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF5479AEAA2F4E6BBC9E723C88A21973 /* DSCircularMenu.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DSCircularMenu/DSCircularMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DSCircularMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DSCircularMenu/DSCircularMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DSCircularMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		BD6642C55228020FF49CA0E7DD0A2D52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CA0B866F50AAA94A29D28F63F2DDBB1 /* DSCircularCollectionView.xcconfig */;
@@ -608,6 +587,35 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		C075C46B6D902E8B4FE171062D892DC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5479AEAA2F4E6BBC9E723C88A21973 /* DSCircularMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DSCircularMenu/DSCircularMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DSCircularMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DSCircularMenu/DSCircularMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DSCircularMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -714,11 +722,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF86DE0C4C9B5EE192BF487B1AB1C4CB /* Build configuration list for PBXNativeTarget "DSCircularMenu" */ = {
+		D688C261C1CE79ACE6A5691774709214 /* Build configuration list for PBXNativeTarget "DSCircularMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F5DF977175038ED82EA36DD58BE0E39 /* Debug */,
-				13A24E64B830D340AEE1E5EEC279B107 /* Release */,
+				C075C46B6D902E8B4FE171062D892DC5 /* Debug */,
+				223775AA7D1B681BDAC40BF60A3B0FEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

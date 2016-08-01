@@ -1,5 +1,5 @@
 //
-//  DSViewController.h
+//  DSAppDelegate.h
 //  DSCircularMenu
 //
 //  Created by Dodda Srinivasan on 07/25/2016.
@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface DSViewController : UIViewController
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

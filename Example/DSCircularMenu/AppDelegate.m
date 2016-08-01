@@ -6,9 +6,9 @@
 //  Copyright (c) 2016 Dodda Srinivasan. All rights reserved.
 //
 
-#import "DSAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation DSAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
