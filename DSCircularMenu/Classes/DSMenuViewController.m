@@ -34,4 +34,8 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [_dataSource selectedMenuItemAt:indexPath.item];
+}
+
 @end

@@ -58,7 +58,7 @@
 -(void)setFrontViewController:(UIViewController *)frontViewController{
     if(_frontViewController != nil){
         [_frontViewController removeFromParentViewController];
-        for(UIView *view in _frontView){
+        for(UIView *view in [_frontView subviews]){
             [view removeFromSuperview];
         }
     }
@@ -145,11 +145,16 @@
     return nil;
 }
 
--(UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index{
+-(UIViewController *)viewControllerForMenuItemAt:(NSInteger)index{
     [self doesNotRecognizeSelector:_cmd];
     [NSException raise:NSInternalInconsistencyException
                 format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
     return nil;
+}
+
+-(void)selectedMenuItemAt:(NSInteger)index{
+    UIViewController *controller = [self viewControllerForMenuItemAt:index];
+    [self setFrontViewController:controller];
 }
 
 @end

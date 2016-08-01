@@ -34,7 +34,7 @@
 -(void)setMenu:(UICollectionViewScrollDirection)scrollDirection;
 
 -(void)reloadMenuItems;
--(nonnull UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index;
+-(nonnull UIViewController *)viewControllerForMenuItemAt:(NSInteger)index;
 -(void)setFrontViewController:(nonnull UIViewController *)frontViewController;
 
 @end

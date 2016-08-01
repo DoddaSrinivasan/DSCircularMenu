@@ -7,6 +7,7 @@
 //
 
 #import "CircularMenuViewController.h"
+#import "DSViewController.h"
 #import "MenuCell.h"
 
 @interface CircularMenuViewController ()
@@ -27,8 +28,8 @@
     
     [self registerNib:[UINib nibWithNibName:@"MenuCell" bundle:[NSBundle mainBundle]] forReuseIdentifier:@"MenuCell"];
     
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor grayColor];
+    DSViewController *vc = (DSViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"DSViewController"];
+    vc.index = 0;
     [self setFrontViewController:vc];
 }
 
@@ -41,8 +42,10 @@
     return cell;
 }
 
--(UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index{
-    return nil;
+-(UIViewController *)viewControllerForMenuItemAt:(NSInteger)index{
+    DSViewController *viewController = (DSViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"DSViewController"];
+    viewController.index = index;
+    return viewController;
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303C60561D4F4EB20002574A /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303C60551D4F4EB20002574A /* DSViewController.m */; };
 		307203801D4736BA003092ED /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3072037F1D4736BA003092ED /* Launch Screen.storyboard */; };
 		307203831D473E7A003092ED /* CircularMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307203821D473E7A003092ED /* CircularMenuViewController.m */; };
 		3072038E1D47671E003092ED /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3072038C1D47671E003092ED /* MenuCell.m */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0161F360DA4ACF0AF45DA174 /* Pods_DSCircularMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSCircularMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		303C60541D4F4EB20002574A /* DSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
+		303C60551D4F4EB20002574A /* DSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
 		3072037F1D4736BA003092ED /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		307203811D473E7A003092ED /* CircularMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularMenuViewController.h; sourceTree = "<group>"; };
 		307203821D473E7A003092ED /* CircularMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularMenuViewController.m; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				307203811D473E7A003092ED /* CircularMenuViewController.h */,
 				307203821D473E7A003092ED /* CircularMenuViewController.m */,
+				303C60541D4F4EB20002574A /* DSViewController.h */,
+				303C60551D4F4EB20002574A /* DSViewController.m */,
 				3072037F1D4736BA003092ED /* Launch Screen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -400,6 +405,7 @@
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				307203831D473E7A003092ED /* CircularMenuViewController.m in Sources */,
 				3072038E1D47671E003092ED /* MenuCell.m in Sources */,
+				303C60561D4F4EB20002574A /* DSViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

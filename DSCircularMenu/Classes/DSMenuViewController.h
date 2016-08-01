@@ -22,7 +22,9 @@
 @protocol DSMenuViewControllerDataSource <NSObject>
 
 @required
+
 -(NSInteger)noOfMenuItems;
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView menuItemAt:(NSInteger)index;
+-(void)selectedMenuItemAt:(NSInteger)index;
 
 @end
