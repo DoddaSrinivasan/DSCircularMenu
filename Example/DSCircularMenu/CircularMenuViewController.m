@@ -26,6 +26,10 @@
       andItemSize:CGSizeMake(50, 50)];
     
     [self registerNib:[UINib nibWithNibName:@"MenuCell" bundle:[NSBundle mainBundle]] forReuseIdentifier:@"MenuCell"];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor grayColor];
+    [self setFrontViewController:vc];
 }
 
 -(NSInteger)noOfMenuItems{

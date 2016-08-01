@@ -20,8 +20,8 @@
     [super viewDidLoad];
     _menuViewController = [[DSMenuViewController alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     _menuViewController.dataSource = self;
-    _menuViewController.view.backgroundColor = [UIColor grayColor];
-    [self addChildViewControllerToMenuPlaceHolder:_menuViewController];
+    _menuViewController.view.backgroundColor = [UIColor clearColor];
+    [self addChildViewController:_menuViewController toView:_menuView];
 }
 
 -(void)loadView{
@@ -30,34 +30,55 @@
     
     _frontView = [[UIView alloc] initWithFrame:bounds];
     _frontView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    _frontView.backgroundColor = [UIColor redColor];
+    _frontView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_frontView];
     
     _menuView = [[UIView alloc] initWithFrame:bounds];
-    _menuView.backgroundColor = [UIColor greenColor];
+    _menuView.backgroundColor = [UIColor clearColor];
     _menuView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_menuView];
     
     //[self.view bringSubviewToFront:_frontView];
 }
 
-- (void)addChildViewControllerToMenuPlaceHolder:(UIViewController *)childVc {
+-(void)addChildViewController:(UIViewController *)childVc toView:(UIView *)view{
     [self addChildViewController:childVc];
-    [_menuView addSubview:childVc.view];
+    [view addSubview:childVc.view];
     [childVc didMoveToParentViewController:self];
-    [self addConstraintsToChildView:childVc.view];
+    [self addConstraintsToChildView:childVc.view forView:view];
 }
 
-- (void)addConstraintsToChildView:(UIView *)childView{
+-(void)addConstraintsToChildView:(UIView *)childView forView:(UIView *)view{
     NSDictionary *views = NSDictionaryOfVariableBindings(childView);
     childView.translatesAutoresizingMaskIntoConstraints = NO;
-    [_menuView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[childView]-(0)-|" options:0 metrics:nil views:views]];
-    [_menuView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[childView]-(0)-|" options:0 metrics:nil views:views]];
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[childView]-(0)-|" options:0 metrics:nil views:views]];
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[childView]-(0)-|" options:0 metrics:nil views:views]];
 }
+
+-(void)setFrontViewController:(UIViewController *)frontViewController{
+    if(_frontViewController != nil){
+        [_frontViewController removeFromParentViewController];
+        for(UIView *view in _frontView){
+            [view removeFromSuperview];
+        }
+    }
+    _frontViewController = frontViewController;
+    [self addChildViewController:_frontViewController toView:_frontView]; 
+}
+
+#pragma mark - orientation and preferred status bar
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    if(_frontViewController == nil){
+        return [super preferredStatusBarStyle];
+    }else{
+        return [_frontViewController preferredStatusBarStyle];
+    }
 }
 
 #pragma mark - Menu set up methods

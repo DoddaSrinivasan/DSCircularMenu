@@ -35,6 +35,7 @@
 
 -(void)reloadMenuItems;
 -(nonnull UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index;
+-(void)setFrontViewController:(nonnull UIViewController *)frontViewController;
 
 @end
 
