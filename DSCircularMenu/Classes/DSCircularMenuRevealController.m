@@ -38,7 +38,29 @@
     _menuView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_menuView];
     
-    //[self.view bringSubviewToFront:_frontView];
+    bounds.size.width = 60;
+    bounds.size.height = 60;
+    _menuButtonView = [[UIView alloc] initWithFrame:bounds];
+    _menuButtonView.layer.cornerRadius = 30;
+    _menuButtonView.backgroundColor = [UIColor redColor];
+    _menuButtonView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:_menuButtonView];
+    
+    UITapGestureRecognizer *menuTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleMenuTap:)];
+    [_menuButtonView addGestureRecognizer:menuTapRecognizer];
+    
+    _menuView.hidden = YES;
+}
+
+- (void)handleMenuTap:(UITapGestureRecognizer *)recognizer {
+    if(_menuView.hidden){
+        _menuView.hidden = NO;
+        [_menuViewController showMenu];
+    }else{
+        [_menuViewController hideMenu];
+        _menuView.hidden = YES;
+    }
+    
 }
 
 -(void)addChildViewController:(UIViewController *)childVc toView:(UIView *)view{
@@ -105,10 +127,17 @@
     if(_menuViewController.circularLayout == nil){
         _menuViewController.circularLayout = [[DSCircularLayout alloc] init];
     }
+    
     [_menuViewController.circularLayout initWithCentre:centre
                              radius:radius
                            itemSize:itemSize
                   andAngularSpacing:20];
+    
+    CGRect menuButtonFrame = [_menuButtonView frame];
+    menuButtonFrame.origin.x = centre.x - 30;
+    menuButtonFrame.origin.y = centre.y - 30;
+    _menuButtonView.frame = menuButtonFrame;
+    
     [_menuViewController.circularLayout setStartAngle:M_PI endAngle:0];
     _menuViewController.circularLayout.mirrorX = NO;
     _menuViewController.circularLayout.mirrorY = NO;
@@ -165,7 +194,7 @@
 -(void)selectedMenuItemAt:(NSInteger)index{
     UIViewController *controller = [self viewControllerForMenuItemAt:index];
     [self setFrontViewController:controller];
-    [self hideMenu];
+    [self handleMenuTap:nil];
 }
 
 @end

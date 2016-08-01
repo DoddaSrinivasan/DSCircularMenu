@@ -22,8 +22,8 @@
     CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
     CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
 
-    [self setMenu:CGPointMake(screenWidth/2, screenHeight-25)
-           radius:screenWidth/2 - 25
+    [self setMenu:CGPointMake(screenWidth/2, screenHeight-40)
+           radius:screenWidth/2 - 40
       andItemSize:CGSizeMake(50, 50)];
     
     [self registerNib:[UINib nibWithNibName:@"MenuCell" bundle:[NSBundle mainBundle]] forReuseIdentifier:@"MenuCell"];

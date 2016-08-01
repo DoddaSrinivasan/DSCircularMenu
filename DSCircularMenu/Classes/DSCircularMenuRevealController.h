@@ -23,6 +23,7 @@
 
 @property (strong, nonatomic, nonnull) UIView *frontView;
 @property (strong, nonatomic, nonnull) UIView *menuView;
+@property (strong, nonatomic, nonnull) UIView *menuButtonView;
 
 
 -(void)registerClass:(nullable Class)cellClass forReuseIdentifier:(NSString * _Nonnull)identifier;
