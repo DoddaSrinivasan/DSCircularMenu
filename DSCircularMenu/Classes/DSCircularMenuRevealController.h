@@ -37,6 +37,9 @@
 -(nonnull UIViewController *)viewControllerForMenuItemAt:(NSInteger)index;
 -(void)setFrontViewController:(nonnull UIViewController *)frontViewController;
 
+-(void)showMenu;
+-(void)hideMenu;
+
 @end
 
 

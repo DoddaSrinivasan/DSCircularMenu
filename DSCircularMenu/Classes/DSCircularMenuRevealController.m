@@ -66,6 +66,16 @@
     [self addChildViewController:_frontViewController toView:_frontView]; 
 }
 
+#pragma mark - menu methods
+
+-(void)showMenu{
+    [_menuViewController showMenu];
+}
+
+-(void)hideMenu{
+    [_menuViewController hideMenu];
+}
+
 #pragma mark - orientation and preferred status bar
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
@@ -155,6 +165,7 @@
 -(void)selectedMenuItemAt:(NSInteger)index{
     UIViewController *controller = [self viewControllerForMenuItemAt:index];
     [self setFrontViewController:controller];
+    [self hideMenu];
 }
 
 @end

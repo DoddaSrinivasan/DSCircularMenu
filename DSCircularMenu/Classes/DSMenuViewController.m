@@ -8,7 +8,9 @@
 
 #import "DSMenuViewController.h"
 
-@interface DSMenuViewController ()
+@interface DSMenuViewController (){
+    NSInteger _menuItemsCount;
+}
 
 @end
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _menuItemsCount = 0;
     _circularLayout = [[DSCircularLayout alloc] init];
     self.collectionView.backgroundColor = [UIColor clearColor];
 }
@@ -26,7 +29,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_dataSource noOfMenuItems];
+    return _menuItemsCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,6 +39,37 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [_dataSource selectedMenuItemAt:indexPath.item];
+}
+
+-(void)showMenu{
+    [self.collectionView performBatchUpdates:^{
+        CGFloat originalAnimationDuration = [CATransaction animationDuration];
+        CGFloat newAnimationDuration = 0.3;
+        [self.collectionView.viewForFirstBaselineLayout.layer setSpeed:originalAnimationDuration/newAnimationDuration];
+        for(int i=0; i<(int)[_dataSource noOfMenuItems]; i++){
+            [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:i inSection:0]]];
+        }
+        _menuItemsCount = [_dataSource noOfMenuItems];
+        [self.collectionView layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+-(void)hideMenu{
+    [self.collectionView performBatchUpdates:^{
+        CGFloat originalAnimationDuration = [CATransaction animationDuration];
+        CGFloat newAnimationDuration = 0.3;
+        [self.collectionView.viewForFirstBaselineLayout.layer setSpeed:originalAnimationDuration/newAnimationDuration];
+        for(int i = _menuItemsCount-1; i >= 0; i--){
+            [self.collectionView deleteItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:i inSection:0]]];
+        }
+        _menuItemsCount = 0;
+        [self.collectionView layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
+    
 }
 
 @end

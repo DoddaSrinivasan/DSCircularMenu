@@ -17,6 +17,9 @@
 
 @property (weak, nonatomic) id<DSMenuViewControllerDataSource> dataSource;
 
+-(void)showMenu;
+-(void)hideMenu;
+
 @end
 
 @protocol DSMenuViewControllerDataSource <NSObject>
