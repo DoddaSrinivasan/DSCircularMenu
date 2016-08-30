@@ -1,10 +1,13 @@
 # DSCircularMenu
+DSCircularMenu is a custom container view controller to provide a circular menu based navigation. It Comes with a simple set up and delegate methods similar to collection or table view. 
+
+<br>
+
+![](http://res.cloudinary.com/dm6lqaxjt/image/upload/v1472538429/DSCircularMenu.gif)
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
