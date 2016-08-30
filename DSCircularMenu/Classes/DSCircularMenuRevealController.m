@@ -164,7 +164,7 @@
     [_menuViewController.collectionView registerNib:nib forCellWithReuseIdentifier:identifier];
 }
 
--(void)setMenu:(CGPoint)centre radius:(CGFloat)radius andItemSize:(CGSize)itemSize{
+-(void)setMenuWithCentre:(CGPoint)centre radius:(CGFloat)radius andItemSize:(CGSize)itemSize{
     if(_menuViewController.circularLayout == nil){
         _menuViewController.circularLayout = [[DSCircularLayout alloc] init];
     }
@@ -183,7 +183,6 @@
     [_menuViewController.circularLayout setStartAngle:M_PI endAngle:0];
     _menuViewController.circularLayout.mirrorX = NO;
     _menuViewController.circularLayout.mirrorY = NO;
-    _menuViewController.circularLayout.rotateItems = YES;
     _menuViewController.circularLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [_menuViewController.collectionView setCollectionViewLayout:_menuViewController.circularLayout];
     [_menuViewController.collectionView.collectionViewLayout invalidateLayout];
@@ -226,7 +225,7 @@
     return nil;
 }
 
--(UIViewController *)viewControllerForMenuItemAt:(NSInteger)index{
+-(UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index{
     [self doesNotRecognizeSelector:_cmd];
     [NSException raise:NSInternalInconsistencyException
                 format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];

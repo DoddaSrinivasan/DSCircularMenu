@@ -15,7 +15,19 @@
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iq4-Ni-6gD">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J82-I2-Oiv">
+                                <rect key="frame" x="29" y="39" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.83529411760000005" green="0.074509803920000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="J82-I2-Oiv" firstAttribute="centerX" secondItem="iq4-Ni-6gD" secondAttribute="centerX" id="ZOo-R3-kxw"/>
+                            <constraint firstItem="J82-I2-Oiv" firstAttribute="centerY" secondItem="iq4-Ni-6gD" secondAttribute="centerY" id="tHC-I1-leJ"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="24"/>
@@ -32,6 +44,9 @@
                 <constraint firstAttribute="trailing" secondItem="iq4-Ni-6gD" secondAttribute="trailing" id="e2v-iB-5eR"/>
                 <constraint firstItem="iq4-Ni-6gD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qy9-Mn-h36"/>
             </constraints>
+            <connections>
+                <outlet property="lblIndex" destination="J82-I2-Oiv" id="GSe-Qn-FHS"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

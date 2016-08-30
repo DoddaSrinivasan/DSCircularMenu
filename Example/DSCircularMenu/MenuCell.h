@@ -10,4 +10,6 @@
 
 @interface MenuCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblIndex;
+
 @end

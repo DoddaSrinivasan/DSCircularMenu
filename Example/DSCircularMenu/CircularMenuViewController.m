@@ -22,7 +22,7 @@
     CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
     CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
 
-    [self setMenu:CGPointMake(screenWidth/2, screenHeight-40)
+    [self setMenuWithCentre:CGPointMake(screenWidth/2, screenHeight-40)
            radius:screenWidth/2 - 40
       andItemSize:CGSizeMake(50, 50)];
     
@@ -39,10 +39,11 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView menuItemAt:(NSInteger)index{
     MenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MenuCell" forIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    [cell.lblIndex setText:[NSString stringWithFormat:@"%d",(int)index]];
     return cell;
 }
 
--(UIViewController *)viewControllerForMenuItemAt:(NSInteger)index{
+-(UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index{
     DSViewController *viewController = (DSViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"DSViewController"];
     viewController.index = index;
     return viewController;

@@ -108,6 +108,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		30981D601D754C9E00CD5585 /* CircularMenu */ = {
+			isa = PBXGroup;
+			children = (
+				307203811D473E7A003092ED /* CircularMenuViewController.h */,
+				307203821D473E7A003092ED /* CircularMenuViewController.m */,
+				303C60541D4F4EB20002574A /* DSViewController.h */,
+				303C60551D4F4EB20002574A /* DSViewController.m */,
+				3072038B1D47671E003092ED /* MenuCell.h */,
+				3072038C1D47671E003092ED /* MenuCell.m */,
+				3072038D1D47671E003092ED /* MenuCell.xib */,
+			);
+			name = CircularMenu;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -145,19 +159,13 @@
 		6003F593195388D20070C39A /* Example for DSCircularMenu */ = {
 			isa = PBXGroup;
 			children = (
+				30981D601D754C9E00CD5585 /* CircularMenu */,
 				6003F59C195388D20070C39A /* AppDelegate.h */,
 				6003F59D195388D20070C39A /* AppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				307203811D473E7A003092ED /* CircularMenuViewController.h */,
-				307203821D473E7A003092ED /* CircularMenuViewController.m */,
-				303C60541D4F4EB20002574A /* DSViewController.h */,
-				303C60551D4F4EB20002574A /* DSViewController.m */,
 				3072037F1D4736BA003092ED /* Launch Screen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				3072038B1D47671E003092ED /* MenuCell.h */,
-				3072038C1D47671E003092ED /* MenuCell.m */,
-				3072038D1D47671E003092ED /* MenuCell.xib */,
 			);
 			name = "Example for DSCircularMenu";
 			path = DSCircularMenu;

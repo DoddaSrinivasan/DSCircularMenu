@@ -31,13 +31,13 @@
 -(void)registerClass:(nullable Class)cellClass forReuseIdentifier:(NSString * _Nonnull)identifier;
 -(void)registerNib:(nullable UINib *)nib forReuseIdentifier:(NSString * _Nonnull)identifier;
 
--(void)setMenu:(CGPoint)centre radius:(CGFloat)radius andItemSize:(CGSize)itemSize;
+-(void)setMenuWithCentre:(CGPoint)centre radius:(CGFloat)radius andItemSize:(CGSize)itemSize;
 -(void)setMenuStartAngle:(CGFloat)startAngle andEndAngle:(CGFloat)endAngle;
 -(void)setMenuXMirror:(BOOL)xMirror yMirror:(BOOL)yMirror;
 -(void)setMenu:(UICollectionViewScrollDirection)scrollDirection;
 
 -(void)reloadMenuItems;
--(nonnull UIViewController *)viewControllerForMenuItemAt:(NSInteger)index;
+-(nonnull UIViewController *)viewControllerForMenuItemAt:(NSUInteger)index;
 -(void)setFrontViewController:(nonnull UIViewController *)frontViewController;
 
 -(void)showMenu;

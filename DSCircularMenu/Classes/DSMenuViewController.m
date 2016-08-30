@@ -48,7 +48,7 @@
     _isAnimating = YES;
     [self.collectionView performBatchUpdates:^{
         CGFloat originalAnimationDuration = [CATransaction animationDuration];
-        CGFloat newAnimationDuration = 0.3;
+        CGFloat newAnimationDuration = 0.2;
         [self.collectionView.viewForFirstBaselineLayout.layer setSpeed:originalAnimationDuration/newAnimationDuration];
         for(int i=0; i<(int)[_dataSource noOfMenuItems]; i++){
             [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:i inSection:0]]];
@@ -64,7 +64,7 @@
     _isAnimating = YES;
     [self.collectionView performBatchUpdates:^{
         CGFloat originalAnimationDuration = [CATransaction animationDuration];
-        CGFloat newAnimationDuration = 0.3;
+        CGFloat newAnimationDuration = 0.2;
         [self.collectionView.viewForFirstBaselineLayout.layer setSpeed:originalAnimationDuration/newAnimationDuration];
         for(int i = _menuItemsCount-1; i >= 0; i--){
             [self.collectionView deleteItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:i inSection:0]]];
